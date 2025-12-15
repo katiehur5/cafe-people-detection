@@ -52,7 +52,7 @@ def main():
         keep = scores >= args.score_thresh
         boxes = boxes[keep]
         scores = scores[keep]
-        total_kept += lens(scores)
+        total_kept += len(scores)
 
         pil_img = T.ToPILImage()(image.cpu())
         draw = ImageDraw.Draw(pil_img)
