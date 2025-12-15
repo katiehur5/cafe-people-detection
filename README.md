@@ -24,6 +24,12 @@ python3.12 -m venv venv
 source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
+```
+3. Train the model on custom dataset.
+```
 python src/train.py
+```
+4. Test the model on 15 test images and check people counts.
+```
 python src/eval.py --ckpt outputs/checkpoints/model_epoch_10.pth
 ```
