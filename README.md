@@ -2,9 +2,11 @@
 
 This project fine-tunes a pre-trained Faster R-CNN model from TorchVision to more accurately and precisely detect people in a café environment under varying lighting conditions.
 
-Training on CPU may take a long time; checkpoints are saved per epoch.
+> [!NOTE]
+> Training on CPU may take a long time; checkpoints are saved per epoch.
 
-Using a virtual environment is recommended but not required.
+> [!TIP]
+> Using a virtual environment is recommended but not required.
 
 > Requires Python 3.10–3.12.
 
