@@ -4,16 +4,6 @@ This project fine-tunes a pre-trained Faster R-CNN model from TorchVision to mor
 
 Results: We ran one experiment. Records of loss across each epoch during training and model outputs during testing can be found in `results.txt`.
 
-> [!NOTE]
-> Training on CPU may take a long time; checkpoints are saved per epoch.
-
-> [!TIP]
-> Using a virtual environment is recommended but not required.
-
-> Requires Python 3.10–3.12.
-
-> If `python` points to Python 2 on your system, use `python3` instead.
-
 ## Setup
 1. Clone this repository:
 ```
@@ -21,6 +11,10 @@ git clone https://github.com/katiehur5/cafe-people-detection.git
 cd cafe-people-detection
 ```
 2.  Install required Python packages using the requirements.txt file:
+> Requires Python 3.10–3.12.
+
+> [!TIP]
+> Using a virtual environment is recommended but not required.
 ```bash
 python3.12 -m venv venv
 source venv/bin/activate
@@ -28,6 +22,8 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 3. Train the model on custom dataset.
+> [!NOTE]
+> Training on CPU may take a long time; checkpoints are saved per epoch.
 ```
 python src/train.py
 ```
