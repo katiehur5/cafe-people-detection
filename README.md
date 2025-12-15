@@ -31,3 +31,7 @@ python src/train.py
 ```
 python src/eval.py --ckpt outputs/checkpoints/model_epoch_10.pth
 ```
+5. Evaluate model's performance.
+```
+python src/eval_map.py --ckpt outputs/checkpoints/model_epoch_10.pth
+```

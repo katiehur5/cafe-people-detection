@@ -166,6 +166,8 @@ Epoch [9/10] Avg loss: 0.1118
 [train] epoch 10/10, batch 140/140, loss=0.0692
 Epoch [10/10] Avg loss: 0.1083
 
+===================================================================================
+
 ======MODEL EVAL======
 
 [1/15] image_id=0 predicted_people=6 saved=outputs/figures/test_img_0_count_6.png
@@ -190,3 +192,21 @@ Score threshold: 0.5
 Raw detections (before threshold): 225
 Detections kept (after threshold): 191
 Avg kept per image: 12.73
+
+===================================================================================
+
+======mAP RESULTS======
+Average Precision  (AP) @[ IoU=0.50:0.50 | area=   all | maxDets=100 ] = 0.890
+Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = -1.000
+Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = -1.000
+Average Precision  (AP) @[ IoU=0.50:0.50 | area= small | maxDets=100 ] = 0.747
+Average Precision  (AP) @[ IoU=0.50:0.50 | area=medium | maxDets=100 ] = 0.902
+Average Precision  (AP) @[ IoU=0.50:0.50 | area= large | maxDets=100 ] = 1.000
+Average Recall     (AR) @[ IoU=0.50:0.50 | area=   all | maxDets=  1 ] = 0.084
+Average Recall     (AR) @[ IoU=0.50:0.50 | area=   all | maxDets= 10 ] = 0.669
+Average Recall     (AR) @[ IoU=0.50:0.50 | area=   all | maxDets=100 ] = 0.933
+Average Recall     (AR) @[ IoU=0.50:0.50 | area= small | maxDets=100 ] = 0.882
+Average Recall     (AR) @[ IoU=0.50:0.50 | area=medium | maxDets=100 ] = 0.937
+Average Recall     (AR) @[ IoU=0.50:0.50 | area= large | maxDets=100 ] = 1.000
+
+AP@0.50 (mAP@0.5 for single class): 0.8902

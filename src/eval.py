@@ -1,3 +1,5 @@
+# qualitative evaluation: runs inference, draws bboxes, counts people, saves images for visual evaluation
+
 import os
 import argparse
 import torch
