@@ -6,6 +6,9 @@ Data: Images (train/valid/test) and annotations can be accessed [here](https://d
 
 Results: We ran one experiment. Records of loss across each epoch during training and model performance (AP) during testing can be found in `results.txt`. Output from the model's transformation of test images can be found [here](https://drive.google.com/drive/folders/16-ytg9w3wHKGIG4bZ55ZbwlH6dkFp0eG?usp=sharing). 
 
+> [!NOTE]
+> Checkpoint files outputted from our fine-tuning experiment were too large to upload to the repo. You can download the last checkpoint [here](https://drive.google.com/file/d/1xLiZOzVR_JEC1QjCp2BizvvekKs6h4rn/view?usp=sharing).
+
 ## Setup
 1. Clone this repository:
 ```
