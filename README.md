@@ -4,7 +4,7 @@ This project fine-tunes a pre-trained Faster R-CNN model from TorchVision to mor
 
 Data: Images (train/valid/test) and annotations can be accessed [here](https://drive.google.com/drive/folders/1lL5gz42IVmu0zyoa9fdtz9qmFBzUhwdq?usp=sharing).
 
-Results: We ran one experiment. Records of loss across each epoch during training and model outputs during testing can be found in `results.txt`.
+Results: We ran one experiment. Records of loss across each epoch during training and model performance (AP) during testing can be found in `results.txt`. Output from the model's transformation of test images can be found [here](https://drive.google.com/drive/folders/16-ytg9w3wHKGIG4bZ55ZbwlH6dkFp0eG?usp=sharing). 
 
 ## Setup
 1. Clone this repository:
@@ -23,7 +23,7 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
-3. Train the model on custom dataset.
+3. Train the model on custom dataset. You can skip this step by downloading our [last checkpoint's weights](https://drive.google.com/file/d/1xLiZOzVR_JEC1QjCp2BizvvekKs6h4rn/view?usp=sharing).
 > [!NOTE]
 > Training on CPU may take a long time; checkpoints are saved per epoch.
 ```
