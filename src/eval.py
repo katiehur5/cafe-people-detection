@@ -6,6 +6,8 @@ import torch
 from torch.utils.data import DataLoader
 import torchvision.transforms as T
 from PIL import ImageDraw
+import numpy as np
+
 
 from dataset import CafeDataset
 from model import get_model
@@ -40,6 +42,9 @@ def main():
     total_preds = 0
     total_kept = 0
 
+    true_counts = []
+    pred_counts = []
+
     for i, (images, targets) in enumerate(test_loader):
         image = images[0].to(device)
         target = targets[0]
@@ -66,6 +71,10 @@ def main():
         
         pred_count = len(scores)
 
+        # ground-truth count = number of GT boxes
+        true_count = int(target["boxes"].shape[0])
+        true_counts.append(true_count)
+        pred_counts.append(pred_count)
 
         # save visualization
         img_id = int(target["image_id"].item()) if "image_id" in target else i
@@ -80,6 +89,16 @@ def main():
     print(f"Raw detections (before threshold): {total_preds}")
     print(f"Detections kept (after threshold): {total_kept}")
     print(f"Avg kept per image: {total_kept / max(1, len(test_dataset)):.2f}")
+
+    true_counts = np.array(true_counts)
+    pred_counts = np.array(pred_counts)
+
+    mae = float(np.mean(np.abs(pred_counts - true_counts)))
+    rmse = float(np.sqrt(np.mean((pred_counts - true_counts) ** 2)))
+
+    print("\n=== Counting Metrics ===")
+    print(f"MAE:  {mae:.4f}")
+    print(f"RMSE: {rmse:.4f}")
 
 if __name__ == "__main__":
     main()
