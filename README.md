@@ -26,7 +26,7 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
-3. Train the model on custom dataset. You can skip this step by downloading our [last checkpoint's weights](https://drive.google.com/file/d/1xLiZOzVR_JEC1QjCp2BizvvekKs6h4rn/view?usp=sharing).
+3. Train the model on custom dataset. You can skip this step by downloading our [last checkpoint's weights](https://drive.google.com/file/d/1xLiZOzVR_JEC1QjCp2BizvvekKs6h4rn/view?usp=sharing) and putting them in a `outputs/checkpoints/` folder.
 > [!NOTE]
 > Training on CPU may take a long time; checkpoints are saved per epoch.
 ```

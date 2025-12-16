@@ -196,6 +196,7 @@ Avg kept per image: 12.73
 ===================================================================================
 
 ======mAP RESULTS======
+
 Average Precision  (AP) @[ IoU=0.50:0.50 | area=   all | maxDets=100 ] = 0.890
 Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = -1.000
 Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = -1.000
@@ -210,3 +211,34 @@ Average Recall     (AR) @[ IoU=0.50:0.50 | area=medium | maxDets=100 ] = 0.937
 Average Recall     (AR) @[ IoU=0.50:0.50 | area= large | maxDets=100 ] = 1.000
 
 AP@0.50 (mAP@0.5 for single class): 0.8902
+
+===================================================================================
+
+======mAE RESULTS======
+
+[1/15] image_id=0 predicted_people=6 saved=outputs/figures/test_img_0_count_6.png
+[2/15] image_id=1 predicted_people=22 saved=outputs/figures/test_img_1_count_22.png
+[3/15] image_id=2 predicted_people=5 saved=outputs/figures/test_img_2_count_5.png
+[4/15] image_id=3 predicted_people=3 saved=outputs/figures/test_img_3_count_3.png
+[5/15] image_id=4 predicted_people=16 saved=outputs/figures/test_img_4_count_16.png
+[6/15] image_id=5 predicted_people=8 saved=outputs/figures/test_img_5_count_8.png
+[7/15] image_id=6 predicted_people=18 saved=outputs/figures/test_img_6_count_18.png
+[8/15] image_id=7 predicted_people=17 saved=outputs/figures/test_img_7_count_17.png
+[9/15] image_id=8 predicted_people=20 saved=outputs/figures/test_img_8_count_20.png
+[10/15] image_id=9 predicted_people=14 saved=outputs/figures/test_img_9_count_14.png
+[11/15] image_id=10 predicted_people=9 saved=outputs/figures/test_img_10_count_9.png
+[12/15] image_id=11 predicted_people=19 saved=outputs/figures/test_img_11_count_19.png
+[13/15] image_id=12 predicted_people=6 saved=outputs/figures/test_img_12_count_6.png
+[14/15] image_id=13 predicted_people=12 saved=outputs/figures/test_img_13_count_12.png
+[15/15] image_id=14 predicted_people=16 saved=outputs/figures/test_img_14_count_16.png
+
+=== Summary ===
+Checkpoint: outputs/checkpoints/model_epoch_10.pth
+Score threshold: 0.5
+Raw detections (before threshold): 225
+Detections kept (after threshold): 191
+Avg kept per image: 12.73
+
+=== Counting Metrics ===
+MAE:  0.8667
+RMSE: 1.4832
