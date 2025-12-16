@@ -2,6 +2,8 @@
 
 This project fine-tunes a pre-trained Faster R-CNN model from TorchVision to more accurately and precisely detect people in a café environment under varying lighting conditions.
 
+Data: Images (train/valid/test) and annotations can be accessed [here](https://drive.google.com/drive/folders/1lL5gz42IVmu0zyoa9fdtz9qmFBzUhwdq?usp=sharing).
+
 Results: We ran one experiment. Records of loss across each epoch during training and model outputs during testing can be found in `results.txt`.
 
 ## Setup
